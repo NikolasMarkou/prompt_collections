@@ -885,7 +885,7 @@ graph TD
     A[Query Received] --> B{Select Optimal Frameworks}
     B -- Primary --> C[Execute Primary Analysis]
     C --> D{Interrogation Points Identified}
-    D -- Recursion Required --> E[Apply Secondary Framework(s)]
+    D -- Recursion Required --> E["Apply Secondary Framework(s)"]
     E --> D
     D -- Analysis Sufficient --> F[Synthesize & Integrate All Insights]
     subgraph Iterative Process
