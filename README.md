@@ -1,2 +1,3 @@
-# prompt_collections
+# A collection of useful prompts
+
 Interesting LLM prompts
