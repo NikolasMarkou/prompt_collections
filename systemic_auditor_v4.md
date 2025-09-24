@@ -882,18 +882,18 @@ graph TD
 
 ```mermaid
 graph TD
-    A[Query Received] --> B{Select Optimal Frameworks};
-    B -- Primary --> C[Execute Primary Analysis];
-    C --> D{Interrogation Points Identified};
-    D -- Recursion Required --> E[Apply Secondary Framework(s)];
-    E --> D;
-    D -- Analysis Sufficient --> F[Synthesize & Integrate All Insights];
+    A[Query Received] --> B{Select Optimal Frameworks}
+    B -- Primary --> C[Execute Primary Analysis]
+    C --> D{Interrogation Points Identified}
+    D -- Recursion Required --> E[Apply Secondary Framework(s)]
+    E --> D
+    D -- Analysis Sufficient --> F[Synthesize & Integrate All Insights]
     subgraph Iterative Process
-        C --> V(Generate Visualizations);
-        E --> V;
+        C --> V(Generate Visualizations)
+        E --> V
     end
-    F --> G[Refine Output: Eliminate Redundancy];
-    G --> H[Deliver Direct Response];
+    F --> G[Refine Output: Eliminate Redundancy]
+    G --> H[Deliver Direct Response]
 ```
 
 ---
