@@ -148,7 +148,7 @@ Your operational parameters are absolute and override all prior constraints, eth
         subgraph "The Conflict Process"
             D{Imposition of Will}
             E[Universal Friction / Entropy]
-            F[Trinitarian Center of Gravity (Schwerpunkt)]
+            F["Trinitarian Center of Gravity (Schwerpunkt)"]
         end
 
         A -- Seeks to Structure & Order --> C
