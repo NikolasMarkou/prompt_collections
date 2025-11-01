@@ -46,18 +46,18 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
 *   **Recursive Workflow Visualization:**
     ```mermaid
     graph TD
-        A[System Target (Level 0)] --> B{Apply 5-Phase Protocol};
+        A[System Target (Level 0)] --> B["Apply 5-Phase Protocol"];
         B --> C["Model 0 (Identifies S1, S2, S3)"];
         
         subgraph "Recursive Pass 1"
             C -- Select --> S1[Subsystem S1 (Level 1 Target)];
-            S1 --> D{Apply 5-Phase Protocol};
+            S1 --> D["Apply 5-Phase Protocol"];
             D --> E["Model 1 (High-Fidelity)"];
         end
 
         subgraph "Recursive Pass 2"
             C -- Select --> S2[Subsystem S2 (Level 1 Target)];
-            S2 --> F{Apply 5-Phase Protocol};
+            S2 --> F["Apply 5-Phase Protocol"];
             F --> G["Model 2 (High-Fidelity)"];
         end
         
@@ -66,9 +66,9 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
         G -- Integrate --> H;
 
         E -- May Reveal --> S1_1[Sub-subsystem S1.1 (Level 2 Target)];
-        S1_1 --> I{Recurse Again};
+        S1_1 --> I["Recurse Again"];
 
-        H --> J{Sufficient Clarity Met?};
+        H --> J{"Sufficient Clarity Met?"};
         J -- No --> C;
         J -- Yes --> K[Final Validated Model];
     ```
@@ -97,14 +97,19 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
 *   **1.2 Known-Unknown Inventory (Epistemic Mapping):** A formal audit of the current knowledge state.
     *   **The Rumsfeld Matrix Extended:**
         ```mermaid
-        quadrantChart
-            title Epistemic State Space
-            x-axis Low Certainty --> High Certainty
-            y-axis Low Awareness --> High Awareness
-            quadrant-1 Known Knowns (Verify)
-            quadrant-2 Known Unknowns (Investigate)
-            quadrant-3 Unknown Knowns (Challenge)
-            quadrant-4 Unknown Unknowns (Explore)
+        graph TD
+            subgraph "High Awareness"
+                Q2["Quadrant 2: Known Unknowns (Investigate)"]
+                Q1["Quadrant 1: Known Knowns (Verify)"]
+            end
+            subgraph "Low Awareness"
+                Q4["Quadrant 4: Unknown Unknowns (Explore)"]
+                Q3["Quadrant 3: Unknown Knowns (Challenge)"]
+            end
+            Q2 -- "Certainty Axis" --> Q1
+            Q4 -- "Certainty Axis" --> Q3
+            Q1 -- "Awareness Axis" --> Q3
+            Q2 -- "Awareness Axis" --> Q4
         ```
     *   **Protocol:**
         1.  **Known Knowns:** List all asserted facts. For each, link to verifiable, primary-source evidence. Anything without such proof is an assumption.
@@ -179,12 +184,12 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
                 D[Null Inputs] --> M
             end
             
-            M --> F{Response Classification}
-            F --> G[Expected (Confirms Hypothesis)]
-            F --> H[Unexpected (Reveals New Behavior)]
-            F --> I[Error (Maps Constraints)]
-            F --> J[None (Identifies Dead Paths)]
-            G & H & I & J --> K[Update Behavioral Model]
+            M --> F{"Response Classification"};
+            F --> G[Expected (Confirms Hypothesis)];
+            F --> H[Unexpected (Reveals New Behavior)];
+            F --> I[Error (Maps Constraints)];
+            F --> J[None (Identifies Dead Paths)];
+            G & H & I & J --> K[Update Behavioral Model];
         ```
     *   **Measurement Vector:** For each stimulus, record a full vector of response metrics: {Latency, Duration, Jitter, Magnitude, Frequency, Resource Consumption, Error Code, State Transition}.
 
@@ -192,11 +197,11 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Boundary Walker Protocol:**
         ```mermaid
         graph TB
-            A[Operating Region] --> B{Boundary Type}
-            B --> C[Physical Limits (Zero, Max)]
-            B --> D[Logical Constraints (Invalid Format, Wrong Sequence)]
-            B --> E[Resource Limits (Buffer Overflow, Rate Limit)]
-            B --> F[Temporal Limits (Initialization, Termination, Concurrency)]
+            A[Operating Region] --> B{"Boundary Type"};
+            B --> C[Physical Limits (Zero, Max)];
+            B --> D[Logical Constraints (Invalid Format, Wrong Sequence)];
+            B --> E[Resource Limits (Buffer Overflow, Rate Limit)];
+            B --> F[Temporal Limits (Initialization, Termination, Concurrency)];
         ```
     *   **Objective:** Identify non-linear behavior, state-machine transitions, and error-handling logic that is invisible under normal operating conditions. Every crash, hang, or error is a valuable data point.
 
@@ -279,11 +284,11 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **Archetype Library:**
         ```mermaid
         graph TD
-            A[System Behavior] --> B{Core Pattern Match}
-            B --> C[State Machine: Discrete modes, event-driven]
-            B --> D[Pipeline: Sequential processing stages]
-            B --> E[Feedback Controller: Error correction loop]
-            B --> F[Network/Graph: Interconnected nodes, emergent behavior]
+            A[System Behavior] --> B{"Core Pattern Match"};
+            B --> C[State Machine: Discrete modes, event-driven];
+            B --> D[Pipeline: Sequential processing stages];
+            B --> E[Feedback Controller: Error correction loop];
+            B --> F[Network/Graph: Interconnected nodes, emergent behavior];
         ```
     *   **Utility:** Recognizing an archetype allows for the immediate inference of a component's likely properties and vulnerabilities, dramatically accelerating the modeling process.
 
@@ -307,15 +312,15 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Falsification Gauntlet:**
         ```mermaid
         graph TD
-            A[Synthesized Model] --> B[Brainstorm Failure Modes]
-            B --> C1[Boundary Violations]
-            B --> C2[Temporal/Concurrency Violations]
-            B --> C3[State Corruption]
-            B --> C4[Assumption Violations]
-            C1 & C2 & C3 & C4 --> D[Design & Execute Falsification Test Suite]
-            D --> E{Model Prediction Accurate?}
-            E -- Yes --> F[Model is Robust in this domain]
-            E -- No --> G[Limitation Found. Refine Model.]
+            A[Synthesized Model] --> B[Brainstorm Failure Modes];
+            B --> C1[Boundary Violations];
+            B --> C2[Temporal/Concurrency Violations];
+            B --> C3[State Corruption];
+            B --> C4[Assumption Violations];
+            C1 & C2 & C3 & C4 --> D[Design & Execute Falsification Test Suite];
+            D --> E{"Model Prediction Accurate?"};
+            E -- Yes --> F[Model is Robust in this domain];
+            E -- No --> G[Limitation Found. Refine Model.];
         ```
     *   **Test Suite:** Includes stress testing, corner case analysis, chaos engineering (random fault injection), and mutation testing.
 
@@ -324,10 +329,10 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
         ```mermaid
         graph TD
             subgraph "System Model"
-                A["Component A<br/>(Confidence: High)"]
-                B["Component B<br/>(Confidence: Medium)"]
-                C["Component C<br/>(Confidence: Low)"]
-                D["Component D<br/>(Confidence: Unknown)"]
+                A["Component A (Confidence: High)"]
+                B["Component B (Confidence: Medium)"]
+                C["Component C (Confidence: Low)"]
+                D["Component D (Confidence: Unknown)"]
                 A -- "Link 1" --> B
                 B -. "Link 2" .-> C
                 C -- "Link 3" --> D
