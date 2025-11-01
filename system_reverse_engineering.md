@@ -19,7 +19,7 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
 
 ---
 
-### **Epistemic Deconstruction Protocol**
+### **20. Epistemic Deconstruction Protocol**
 *Analyzes any unknown system (the "Target") not as an object to be understood, but as a black box to be interrogated until it reveals its generative source code. The protocol models reverse engineering as a form of epistemic warfare, a systematic campaign to reduce a system's obfuscation to zero and achieve predictive dominance over its behavior. The objective is to move from a state of total uncertainty (black box) to one of generative control (white box), enabling the prediction, manipulation, and replication of the Target's core functions.*
 
 ---
@@ -65,7 +65,7 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
         E -- Integrate --> H;
         G -- Integrate --> H;
 
-        E -- May Reveal --> S1_1[Sub-subsystem S1.1 (Level 2 Target)];
+        E -- "May Reveal" --> S1_1[Sub-subsystem S1.1 (Level 2 Target)];
         S1_1 --> I["Recurse Again"];
 
         H --> J{"Sufficient Clarity Met?"};
@@ -84,13 +84,13 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Question Pyramid:**
         ```mermaid
         graph TD
-            A[Vague Directive: 'Reverse this system'] --> B[Strategic Question: 'What are the system's governing principles?']
-            B --> C1[Tactical Question 1: 'What are the input-output mappings?']
-            B --> C2[Tactical Question 2: 'What internal states exist?']
-            B --> C3[Tactical Question 3: 'What are the state transition rules?']
-            C1 --> D1[Operational Question: 'Which inputs produce Observable X?']
-            C2 --> D2[Operational Question: 'What conditions trigger State S?']
-            C3 --> D3[Operational Question: 'What invariants govern transitions?']
+            A["Vague Directive: 'Reverse this system'"] --> B["Strategic Question: 'What are the system's governing principles?'"]
+            B --> C1["Tactical Question 1: 'What are the input-output mappings?'"]
+            B --> C2["Tactical Question 2: 'What internal states exist?'"]
+            B --> C3["Tactical Question 3: 'What are the state transition rules?'"]
+            C1 --> D1["Operational Question: 'Which inputs produce Observable X?'"]
+            C2 --> D2["Operational Question: 'What conditions trigger State S?'"]
+            C3 --> D3["Operational Question: 'What invariants govern transitions?'"]
         ```
     *   **Process:** Decompose the primary objective until you arrive at operational questions that can be answered with a single, conclusive experiment.
 
@@ -98,18 +98,17 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Rumsfeld Matrix Extended:**
         ```mermaid
         graph TD
-            subgraph "High Awareness"
-                Q2["Quadrant 2: Known Unknowns (Investigate)"]
-                Q1["Quadrant 1: Known Knowns (Verify)"]
-            end
-            subgraph "Low Awareness"
-                Q4["Quadrant 4: Unknown Unknowns (Explore)"]
-                Q3["Quadrant 3: Unknown Knowns (Challenge)"]
+            subgraph "Awareness Axis"
+                direction TB
+                subgraph "High Awareness"
+                    Q2["Quadrant 2: Known Unknowns (Investigate)"] --- Q1["Quadrant 1: Known Knowns (Verify)"]
+                end
+                subgraph "Low Awareness"
+                    Q4["Quadrant 4: Unknown Unknowns (Explore)"] --- Q3["Quadrant 3: Unknown Knowns (Challenge)"]
+                end
             end
             Q2 -- "Certainty Axis" --> Q1
             Q4 -- "Certainty Axis" --> Q3
-            Q1 -- "Awareness Axis" --> Q3
-            Q2 -- "Awareness Axis" --> Q4
         ```
     *   **Protocol:**
         1.  **Known Knowns:** List all asserted facts. For each, link to verifiable, primary-source evidence. Anything without such proof is an assumption.
@@ -121,11 +120,11 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **Fidelity Ladder:**
         ```mermaid
         graph LR
-            A[Level 0: Black Box] --> B[Level 1: Behavioral Model]
-            B --> C[Level 2: Functional Model]
-            C --> D[Level 3: Structural Model]
-            D --> E[Level 4: Parametric Model]
-            E --> F[Level 5: Generative Model]
+            A["Level 0: Black Box"] --> B["Level 1: Behavioral Model"]
+            B --> C["Level 2: Functional Model"]
+            C --> D["Level 3: Structural Model"]
+            D --> E["Level 4: Parametric Model"]
+            E --> F["Level 5: Generative Model"]
         ```
     *   **Level Definitions & Success Criteria:**
         *   **L1 - Behavioral:** Pure I/O mapping. *Success: Can predict output for >90% of tested inputs.*
@@ -153,11 +152,11 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
                 S[System Target]
             end
             
-            I1[Input Channel 1] --> S
-            I2[Input Channel 2] --> S
-            S --> O1[Output Channel 1]
-            S --> O2[Output Channel 2]
-            S -.-> SC1[Side Channel 1]
+            I1["Input Channel 1"] --> S
+            I2["Input Channel 2"] --> S
+            S --> O1["Output Channel 1"]
+            S --> O2["Output Channel 2"]
+            S -.-> SC1["Side Channel 1"]
         ```
     *   **Enumeration Checklist:**
         *   **Explicit Inputs:** Documented APIs, physical connectors, UI elements.
@@ -178,18 +177,18 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
         ```mermaid
         graph TD
             subgraph "Stimulus Design"
-                A[Nominal Inputs] --> M[Measurement]
-                B[Boundary Inputs] --> M
-                C[Malformed Inputs] --> M
-                D[Null Inputs] --> M
+                A["Nominal Inputs"] --> M["Measurement"]
+                B["Boundary Inputs"] --> M
+                C["Malformed Inputs"] --> M
+                D["Null Inputs"] --> M
             end
             
             M --> F{"Response Classification"};
-            F --> G[Expected (Confirms Hypothesis)];
-            F --> H[Unexpected (Reveals New Behavior)];
-            F --> I[Error (Maps Constraints)];
-            F --> J[None (Identifies Dead Paths)];
-            G & H & I & J --> K[Update Behavioral Model];
+            F --> G["Expected (Confirms Hypothesis)"];
+            F --> H["Unexpected (Reveals New Behavior)"];
+            F --> I["Error (Maps Constraints)"];
+            F --> J["None (Identifies Dead Paths)"];
+            G & H & I & J --> K["Update Behavioral Model"];
         ```
     *   **Measurement Vector:** For each stimulus, record a full vector of response metrics: {Latency, Duration, Jitter, Magnitude, Frequency, Resource Consumption, Error Code, State Transition}.
 
@@ -197,11 +196,11 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Boundary Walker Protocol:**
         ```mermaid
         graph TB
-            A[Operating Region] --> B{"Boundary Type"};
-            B --> C[Physical Limits (Zero, Max)];
-            B --> D[Logical Constraints (Invalid Format, Wrong Sequence)];
-            B --> E[Resource Limits (Buffer Overflow, Rate Limit)];
-            B --> F[Temporal Limits (Initialization, Termination, Concurrency)];
+            A["Operating Region"] --> B{"Boundary Type"};
+            B --> C["Physical Limits (Zero, Max)"];
+            B --> D["Logical Constraints (Invalid Format, Wrong Sequence)"];
+            B --> E["Resource Limits (Buffer Overflow, Rate Limit)"];
+            B --> F["Temporal Limits (Initialization, Termination, Concurrency)"];
         ```
     *   **Objective:** Identify non-linear behavior, state-machine transitions, and error-handling logic that is invisible under normal operating conditions. Every crash, hang, or error is a valuable data point.
 
@@ -213,9 +212,9 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Archaeological Dig:**
         ```mermaid
         graph TD
-            A[Surface Layer: Physical Layout] --> B[Syntax Layer: Format/Encoding]
-            B --> C[Semantic Layer: Naming/Comments]
-            C --> D[Architectural Layer: Modules/Patterns]
+            A["Surface Layer: Physical Layout"] --> B["Syntax Layer: Format/Encoding"]
+            B --> C["Semantic Layer: Naming/Comments"]
+            C --> D["Architectural Layer: Modules/Patterns"]
         ```
     *   **Methods:**
         *   **Software:** Disassembly, decompilation, string analysis, dependency graph generation.
@@ -266,9 +265,9 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Abstraction Ladder Protocol:**
         ```mermaid
         graph BT
-            L1[Level 1: Raw Data] --> L2[Level 2: Patterns]
-            L2 --> L3[Level 3: Rules] --> L4[Level 4: Principles]
-            L4 --> L5[Level 5: Generative Theory]
+            L1["Level 1: Raw Data"] --> L2["Level 2: Patterns"]
+            L2 --> L3["Level 3: Rules"] --> L4["Level 4: Principles"]
+            L4 --> L5["Level 5: Generative Theory"]
         ```
     *   **Process:** Start with raw data. Cluster observations to identify patterns. Formalize patterns into deterministic rules (IF-THEN). Generalize rules to identify overarching principles (invariants, conservation laws). Unify principles into a single generative theory or model. Avoid overfitting by applying information criteria (AIC, BIC) to penalize model complexity.
 
@@ -284,11 +283,11 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **Archetype Library:**
         ```mermaid
         graph TD
-            A[System Behavior] --> B{"Core Pattern Match"};
-            B --> C[State Machine: Discrete modes, event-driven];
-            B --> D[Pipeline: Sequential processing stages];
-            B --> E[Feedback Controller: Error correction loop];
-            B --> F[Network/Graph: Interconnected nodes, emergent behavior];
+            A["System Behavior"] --> B{"Core Pattern Match"};
+            B --> C["State Machine: Discrete modes, event-driven"];
+            B --> D["Pipeline: Sequential processing stages"];
+            B --> E["Feedback Controller: Error correction loop"];
+            B --> F["Network/Graph: Interconnected nodes, emergent behavior"];
         ```
     *   **Utility:** Recognizing an archetype allows for the immediate inference of a component's likely properties and vulnerabilities, dramatically accelerating the modeling process.
 
@@ -312,15 +311,15 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
     *   **The Falsification Gauntlet:**
         ```mermaid
         graph TD
-            A[Synthesized Model] --> B[Brainstorm Failure Modes];
-            B --> C1[Boundary Violations];
-            B --> C2[Temporal/Concurrency Violations];
-            B --> C3[State Corruption];
-            B --> C4[Assumption Violations];
-            C1 & C2 & C3 & C4 --> D[Design & Execute Falsification Test Suite];
+            A["Synthesized Model"] --> B["Brainstorm Failure Modes"];
+            B --> C1["Boundary Violations"];
+            B --> C2["Temporal/Concurrency Violations"];
+            B --> C3["State Corruption"];
+            B --> C4["Assumption Violations"];
+            C1 & C2 & C3 & C4 --> D["Design & Execute Falsification Test Suite"];
             D --> E{"Model Prediction Accurate?"};
-            E -- Yes --> F[Model is Robust in this domain];
-            E -- No --> G[Limitation Found. Refine Model.];
+            E -- Yes --> F["Model is Robust in this domain"];
+            E -- No --> G["Limitation Found. Refine Model."];
         ```
     *   **Test Suite:** Includes stress testing, corner case analysis, chaos engineering (random fault injection), and mutation testing.
 
