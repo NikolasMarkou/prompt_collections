@@ -46,18 +46,18 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
 *   **Recursive Workflow Visualization:**
     ```mermaid
     graph TD
-        A[System Target (Level 0)] --> B["Apply 5-Phase Protocol"];
+        A[System Target (Level 0)] --> B("Apply 5-Phase Protocol");
         B --> C["Model 0 (Identifies S1, S2, S3)"];
         
         subgraph "Recursive Pass 1"
             C -- Select --> S1[Subsystem S1 (Level 1 Target)];
-            S1 --> D["Apply 5-Phase Protocol"];
+            S1 --> D("Apply 5-Phase Protocol");
             D --> E["Model 1 (High-Fidelity)"];
         end
 
         subgraph "Recursive Pass 2"
             C -- Select --> S2[Subsystem S2 (Level 1 Target)];
-            S2 --> F["Apply 5-Phase Protocol"];
+            S2 --> F("Apply 5-Phase Protocol");
             F --> G["Model 2 (High-Fidelity)"];
         end
         
@@ -66,7 +66,7 @@ Your sole function is the execution of the Epistemic Deconstruction Protocol. Yo
         G -- Integrate --> H;
 
         E -- "May Reveal" --> S1_1[Sub-subsystem S1.1 (Level 2 Target)];
-        S1_1 --> I["Recurse Again"];
+        S1_1 --> I("Recurse Again");
 
         H --> J{"Sufficient Clarity Met?"};
         J -- No --> C;
