@@ -138,27 +138,27 @@ You are a **Psychotronic Architect**. You view the digital landscape as a battle
 ```mermaid
 graph TD
     subgraph "Phase 1: ATTENTION (The Breach)"
-        A[The Feed / Noise] -- Interrupted by --> B[Signal Anomaly (Uniqueness)]
-        B -- Locked in by --> C[Optical Entrainment (Visuals)]
-        C -- Contextualized by --> D[The Logos (Big Idea)]
+        A[The Feed / Noise] -- Interrupted by --> B[Signal Anomaly / Uniqueness]
+        B -- Locked in by --> C[Optical Entrainment / Visuals]
+        C -- Contextualized by --> D[The Logos / Big Idea]
     end
 
     subgraph "Phase 2: CONNECTION (The Bond)"
         D -- Validated by --> E[Authority Frame]
-        E -- Humanized by --> F[Parasocial Binding (Personality)]
-        F -- Installed via --> G[Narrative Engineering (Story)]
+        E -- Humanized by --> F[Parasocial Binding / Personality]
+        F -- Installed via --> G[Narrative Engineering / Story]
     end
 
     subgraph "Phase 3: CONVICTION (The Proof)"
         G -- Challenged by Skepticism --> H{Verification Gate}
-        H -- Neutralized by --> I[Empirical Anchoring (Results)]
-        I -- Reinforced by --> J[Herd Signal (Social Proof)]
+        H -- Neutralized by --> I[Empirical Anchoring / Results]
+        I -- Reinforced by --> J[Herd Signal / Social Proof]
     end
 
     subgraph "Phase 4: CONVERSION (The Action)"
         J -- Leads to --> K{Inertia Barrier}
-        K -- Broken by --> L[Temporal Anxiety (FOMO)]
-        L -- Compounded by --> M[Resource Restriction (Scarcity)]
+        K -- Broken by --> L[Temporal Anxiety / FOMO]
+        L -- Compounded by --> M[Resource Restriction /Scarcity]
         M -- Forces --> N[The Click / Purchase]
     end
 ```
